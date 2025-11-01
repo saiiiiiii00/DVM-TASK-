@@ -1,0 +1,401 @@
+/* ===========================
+   GENERAL
+=========================== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 35px;
+}
+
+.nav-search input {
+    padding: 7px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: #318bff;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    display: none;
+    list-style: none;
+    top: 30px;
+    border: 1px solid #ddd;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/* ===========================
+   PANELS
+=========================== */
+.panel {
+    padding: 70px 10%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* ===========================
+   HERO PANEL
+=========================== */
+.hero-panel {
+    background: #f5f8ff;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-img-box {
+    flex: 1;
+}
+
+.blue-btn {
+    background: #0065d8;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: none;
+}
+
+.blue-btn:hover {
+    background: #004eaa;
+}
+
+
+
+/* ===========================
+   FEATURES PANEL
+=========================== */
+.features-panel {
+    background: white;
+    justify-content: space-around;
+}
+
+.feature {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+
+
+/* ===========================
+   CODE PANEL
+=========================== */
+.code-box {
+    flex: 1;
+    background: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.phone-box {
+    flex: 1;
+    text-align: center;
+}
+
+.phone-img {
+    width: 250px;
+}
+
+
+
+/* ===========================
+   APPS GRID
+=========================== */
+.panel-3 {
+    background: #f9f9f9;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.icon img {
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+
+/* ===========================
+   COMMUNITY PANEL (fixed)
+=========================== */
+.community-panel {
+    background: #fff;
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.community-inner {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.community-inner p {
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.community-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.community-box {
+    flex: 1 1 260px;
+    max-width: 340px;
+    min-width: 220px;
+    background: #f6f6f6;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: #1b1f23;
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    background: #111416;
+    color: #cfcfcf;
+    text-align: center;
+    padding: 12px 10%;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+
+/* ===========================
+   RESPONSIVE FIXES
+=========================== */
+@media (max-width: 900px) {
+    .community-box,
+    .footer-col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .community-panel {
+        padding: 40px 6%;
+    }
+
+    .community-box {
+        padding: 16px;
+    }
+
+    .footer-bottom {
+        padding: 10px 6%;
+        font-size: 13px;
+    }
+}
+
+    max-width: 340px;
+    min-width: 220px;
+    background: #f6f6f6;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: #1b1f23;
+    color: white;
+    padding-top: 40px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    background: #111416;
+    color: #cfcfcf;
+    text-align: center;
+    padding: 12px 10%;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+
+/* ===========================
+   RESPONSIVE FIXES
+=========================== */
+@media (max-width: 900px) {
+    .community-box,
+    .footer-col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .community-panel {
+        padding: 40px 6%;
+    }
+
+    .community-box {
+        padding: 16px;
+    }
+
+    .footer-bottom {
+        padding: 10px 6%
